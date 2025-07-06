@@ -1,38 +1,181 @@
-.App {
-  text-align: center;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.bg-container {
   min-height: 100vh;
+}
+
+.navbar-container {
+  background-color: #2c0e3a;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 5vh;
+}
+
+.score-container {
+  display: flex;
+  color: #ffffff;
+  align-items: center;
+}
+
+.timer-img {
+  height: 25px;
+  padding: 2px 6px 2px 15px;
+}
+
+.main-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/match-game-bg.png');
+  background-size: cover;
+  min-height: 93vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 40px;
+}
+
+.match-image {
+  height: 44vh;
+}
+
+.button-container {
+  list-style: none;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.button {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.list-container {
+  list-style: none;
+  padding-left: 18px;
+  display: flex;
+  align-items: center;
+  max-width: 40%;
+  flex-wrap: wrap;
+}
+
+.thumbnail-image {
+  height: 100px;
+  margin: 6px;
+  cursor: pointer;
+}
+
+.active {
+  color: #fec653;
+  border-bottom: #fec653 2px solid;
+}
+
+.result-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/match-game-score-card-lg-bg.png');
+  background-size: cover;
+  height: 100vh;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  color: #ffffff;
 }
 
-.App-link {
-  color: #61dafb;
+.trophy {
+  height: 200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.playagain {
+  background-color: #cf60c8;
+  border: 0;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.score-color {
+  color: #fec653;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  .logo {
+  width: 35vw;
+  height: auto;
+}
+  .button-container {
+    width: 100%;
+  }
+
+  .list-container {
+    max-width: 80%;
+    justify-content: center;
+  }
+
+  .thumbnail-image {
+    height: 70px;
+  }
+
+  .match-image {
+    height: 30vh;
+  }
+
+  .result-container {
+    width: 90vw;
+    background-position: center;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .list-container {
+    max-width: 60%;
+  }
+
+  .button-container {
+    width: 50%;
+  }
+
+  .match-image {
+    height: 38vh;
+  }
+
+  .thumbnail-image {
+    height: 90px;
+  }
+
+  .result-container {
+    width: 60vw;
   }
 }
